@@ -109,7 +109,7 @@ class PlayerView: UIView {
         return button
     }()
     
-//MARK: -Demo buttons#imageLiteral(resourceName: "simulator_screenshot_003A9966-47A1-41A5-9EAC-D943E3654FC6.png")
+//MARK: -Demo buttons
 
     var plusButton: UIButton = {
         let button = UIButton(type: .system)
