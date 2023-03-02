@@ -49,9 +49,6 @@ class PlayerController: UIViewController {
             self?.shareButtonPressed()
         }
         
-//MARK: - default playing view Updates
-      
-        
 //MARK: - initializing player
         do {
             let track = storage.audioPaths[trackPosition]
@@ -70,7 +67,6 @@ class PlayerController: UIViewController {
 
 //MARK: - extensions 
 extension PlayerController {
-    
     private func playPauseButtonPressed() {
         let iconConfiguration = UIImage.SymbolConfiguration(pointSize: 20)
         let playIcon = UIImage(systemName: "play", withConfiguration: iconConfiguration)?.withTintColor(.black, renderingMode: .alwaysOriginal)
@@ -92,7 +88,6 @@ extension PlayerController {
     
     private func startButtonPressed() {
         trackPosition -= 1
-        
         if trackPosition < 0 {
             trackPosition = 1
         } else if trackPosition > 1 {
@@ -112,7 +107,6 @@ extension PlayerController {
     
     private func endButtonPressed() {
         trackPosition += 1
-        
         if trackPosition < 0 {
             trackPosition = 1
         } else if trackPosition > 1 {
@@ -126,8 +120,6 @@ extension PlayerController {
         mainView?.currentAlbumLabel.text! = "Playing album: " + storage.albumNames[trackPosition]
         mainView?.currentTrackNameLabel.text = storage.trackNames[trackPosition]
         player.play()
-        
-      
     }
     
     //MARK: -time operations

@@ -19,7 +19,6 @@ class SongsListController: UIViewController {
         mainView?.trackOneButtonPressedClosure = { [weak self] in
             self?.trackOneButtonPressed()
         }
-        
         mainView?.trackTwoButtonPressedClosure = { [weak self] in
             self?.trackTwoButtonPressed()
         }
@@ -32,7 +31,6 @@ class SongsListController: UIViewController {
 }
 
 extension SongsListController {
-    
     func trackOneButtonPressed() {
         firstLabelUpdate(trackPosition: 0)
     }

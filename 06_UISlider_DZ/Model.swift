@@ -9,7 +9,6 @@ import Foundation
 import AVFoundation
 import UIKit
 
-//var audioFilesStorage: [AudioFile] = []
 let pathOne = Bundle.main.path(forResource: "Timati_Mario_Winans", ofType: "mp3")
 let pathTwo = Bundle.main.path(forResource: "Decl", ofType: "mp3")
 let imageOne = UIImage(named: "trackOne_Logo")
@@ -27,7 +26,6 @@ struct Storage {
         self.audioPaths.append(track)
         print(audioPaths.count)
     }
-
 }
 
 struct AudioFile {
@@ -39,12 +37,8 @@ struct AudioFile {
     }
 }
 
-
 let trackOne = AudioFile(audioPath: pathOne ?? "not found")
 let trackTwo = AudioFile(audioPath: pathTwo ?? "not found")
-
-
-//MARK: - player instance
 
 
 

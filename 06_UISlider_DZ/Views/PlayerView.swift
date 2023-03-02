@@ -8,13 +8,10 @@
 import UIKit
 
 class PlayerView: UIView {
-    static let normalBlue = #colorLiteral(red: 0.2423955537, green: 0.6974318635, blue: 1, alpha: 0.4957308607)
-    static let normalGray = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 0.1967226404)
     static let minTrackColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
     static let maxTrackColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-
-
     static var playingTrackPic: UIImage?
+    
     
     var playingFromLabel: UILabel = {
         let label = UILabel()
@@ -73,7 +70,6 @@ class PlayerView: UIView {
     
     let currentTrackTimeSlider: UISlider = {
         let slider = UISlider()
-        
         slider.maximumTrackTintColor = PlayerView.minTrackColor
         slider.minimumTrackTintColor = PlayerView.maxTrackColor
         var configurationForSelected = UIImage.SymbolConfiguration(pointSize: 23)
@@ -143,7 +139,7 @@ class PlayerView: UIView {
         return button
     }()
 
-//MARK: -action buttons
+//MARK: - action buttons
     var endButton: UIButton = {
         let button = UIButton(type: .system)
         let iconConfiguration = UIImage.SymbolConfiguration.init(pointSize: 15)
@@ -173,12 +169,18 @@ class PlayerView: UIView {
         return label
     }()
 
-
-    //var image = UIImage()
     var imageView = UIImageView(image: PlayerView.playingTrackPic)
     var trackPicView = UIView()
-            
+
+//MARK: - closures for handlers
+        var playPauseButtonClosure:    (() -> Void)?
+        var sharebuttonPressedClosure: (() -> Void)?
+        var startButtonPressedClosure: (() -> Void)?
+        var endButtonPressedClosere:   (() -> Void)?
+        var closeButtonPressedClosure: (() -> Void)?
+        var slideSlederClosure:        (() -> Void)?
     
+//MARK: - init
     init() {
         super .init(frame: .zero)
         setupView()
@@ -188,14 +190,6 @@ class PlayerView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-//MARK: - closures for handlers
-    var playPauseButtonClosure:    (() -> Void)?
-    var sharebuttonPressedClosure: (() -> Void)?
-    var startButtonPressedClosure: (() -> Void)?
-    var endButtonPressedClosere:   (() -> Void)?
-    var closeButtonPressedClosure: (() -> Void)?
-    var slideSlederClosure:        (() -> Void)?
 }
 
 

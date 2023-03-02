@@ -114,7 +114,7 @@ class SongsListView: UIView {
     var trackOneButtonPressedClosure: (() -> Void)?
     var trackTwoButtonPressedClosure: (() -> Void)?
 
-//MARK: - closures
+//MARK: - init
     init() {
         super .init(frame: .zero)
         setupView()
@@ -179,7 +179,7 @@ extension SongsListView {
             trackOneButton.trailingAnchor.constraint(equalTo: trackOneName.trailingAnchor),
             trackOneButton.topAnchor.constraint(equalTo: songImageOne.topAnchor),
             trackOneButton.heightAnchor.constraint(equalToConstant: 50),
-            //Track two
+            //Track two views
             underlineTrackTwo.topAnchor.constraint(equalTo: songImageTwo.bottomAnchor, constant: 15),
             underlineTrackTwo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
             underlineTrackTwo.trailingAnchor.constraint(equalTo: trailingAnchor),
