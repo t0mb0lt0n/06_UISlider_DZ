@@ -8,8 +8,7 @@
 import UIKit
 
 class PlayerView: UIView {
-    static let normalBlue = #colorLiteral(red: 0.2423955537, green: 0.6974318635, blue: 1, alpha: 0.4957308607)
-    static let normalGray = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 0.1967226404)
+   
     static let minTrackColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
     static let maxTrackColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
 
