@@ -17,8 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let mainVC = SongsListController()
         let navController = UINavigationController(rootViewController: mainVC)
-        //navController.setNavigationBarHidden(true, animated: true) //navController.setNavigationBarHidden(true, animated: true)
-        //navController.setNavigationBarHidden(true, animated: true)
+        //navController.setNavigationBarHidden(true, animated: true) hide nav bar
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
