@@ -8,11 +8,8 @@
 import UIKit
 
 class PlayerView: UIView {
-   
     static let minTrackColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
     static let maxTrackColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-
-
     static var playingTrackPic: UIImage?
     
     var playingFromLabel: UILabel = {
@@ -72,7 +69,6 @@ class PlayerView: UIView {
     
     let currentTrackTimeSlider: UISlider = {
         let slider = UISlider()
-        
         slider.maximumTrackTintColor = PlayerView.minTrackColor
         slider.minimumTrackTintColor = PlayerView.maxTrackColor
         var configurationForSelected = UIImage.SymbolConfiguration(pointSize: 23)
@@ -171,7 +167,6 @@ class PlayerView: UIView {
         label.textAlignment = .left
         return label
     }()
-
 
     //var image = UIImage()
     var imageView = UIImageView(image: PlayerView.playingTrackPic)
