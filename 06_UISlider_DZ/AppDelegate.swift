@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        //generate main VC
         let mainVC = SongsListController()
         let navController = UINavigationController(rootViewController: mainVC)
         //navController.setNavigationBarHidden(true, animated: true) hide nav bar
